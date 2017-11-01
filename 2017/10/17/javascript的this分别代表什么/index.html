@@ -12,7 +12,7 @@
   
   <title>
     
-      煜
+      javascript的this分别代表什么 | 煜
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -113,93 +113,71 @@
   </div>
 </header>
 
-    <div id="article-banner">
-  <h2>Archives</h2>
-  <p class="post-date">文章归档</p>
-</div>
-<main class="app-body" id="archives">
-  
-  
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2017
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/2017/Day07-组件生命周期详解/" class="archive-title">组件生命周期详解</a>
-        <p class="archive-date">09-17</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/10/Day06-理解Virtual-DOM模型/" class="archive-title">理解Virtual-DOM模型</a>
-        <p class="archive-date">09-10</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/02/Day05-组件间的通信/" class="archive-title">React组件间的通信</a>
-        <p class="archive-date">09-02</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/07/01/Day04-React中的样式处理/" class="archive-title">React中的样式处理</a>
-        <p class="archive-date">07-01</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/30/Day03-React使用表单的正确姿势/" class="archive-title">React使用表单的正确姿势</a>
-        <p class="archive-date">06-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/28/Day02-React事件系统/" class="archive-title">React事件系统</a>
-        <p class="archive-date">06-28</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/26/Day01-初识React/" class="archive-title">初识React</a>
-        <p class="archive-date">06-26</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/17/React常见问题的整理/" class="archive-title">React常见问题的整理</a>
-        <p class="archive-date">06-17</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/14/深入理解flex-grow、flex-basis、flex-shrink/" class="archive-title">深入理解flex-grow、flex-basis、flex-shrink</a>
-        <p class="archive-date">06-14</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/12/纯手工打造前端后端分离项目中的mock-server/" class="archive-title">纯手工打造前端后端分离项目中的mock-server</a>
-        <p class="archive-date">06-12</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/09/深入理解JavaScript原型和原型链/" class="archive-title">深入理解JavaScript原型和原型链</a>
-        <p class="archive-date">06-09</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/07/纪念那些年我写的PHP/" class="archive-title">纪念那些年我写的PHP</a>
-        <p class="archive-date">06-07</p>
-      </div>
-    
+    <div id="article-banner" style="background-image: url('http://file.muyutech.com/about.jpg');">
+  <h2>javascript的this分别代表什么</h2>
+  <p class="post-date">2017-10-17</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
   </div>
+</div>
+<main class="app-body">
+  <article class="post-article">
+    <section class="markdown-content"><blockquote>
+<p>鉴于大家对this到底代表的是什么有疑问，现在将我个人理解的this的情况整理如下.</p>
+</blockquote>
+<h4>第一种情况:</h4>
+<p>如果是一个全局的function，则this相当于window对象。</p>
+<p><img src="http://blog.liueryan.com/blogimg/17/1.png" alt="" /></p>
+<p>这个打印出来的结果：</p>
+<p><img src="http://blog.liueryan.com/blogimg/17/2.png" alt="" /></p>
+<p>通过打印出来的结果可以明显看到，这个时候this相当于window。</p>
+<h4>第二种情况:</h4>
+<p><img src="http://blog.liueryan.com/blogimg/17/3.png" alt="" /></p>
+<p>这个打印出来的结果：</p>
+<p><img src="http://blog.liueryan.com/blogimg/17/4.png" alt="" /></p>
+<h4>第三种情况:</h4>
+<p><img src="http://blog.liueryan.com/blogimg/17/5.png" alt="" /></p>
+<p>这个打印出来的结果：</p>
+<p><img src="http://blog.liueryan.com/blogimg/17/6.png" alt="" /></p>
+<h4>第四种情况:</h4>
+<p>如果使用new的方式去实例化一个对象，则this不等于window对象，this指向function a的实例 </p>
+<p><img src="http://blog.liueryan.com/blogimg/17/7.png" alt="" /></p>
+<p>这个打印出来的结果：</p>
+<p><img src="http://blog.liueryan.com/blogimg/17/8.png" alt="" /></p>
 </section>
-  
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#Javascript" >
+    <span class="tag-code">Javascript</span>
+  </a>
+
+      </div>
+    
+    <div class="money-like">
+      <div class="reward-btn">
+        赏
+        <span class="money-code">
+          <span class="alipay-code">
+            <div class="code-image"></div>
+            <b>使用支付宝打赏</b>
+          </span>
+          <span class="wechat-code">
+            <div class="code-image"></div>
+            <b>使用微信打赏</b>
+          </span>
+        </span>
+      </div>
+      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+    </div>
+    
+    
+      
+    
+  </article>
 </main>
 
-<script>
-  (function () {
-    var url = 'https://yanm1ng.github.io/tags/php/index.html';
-    $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
-  })();
-</script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>

@@ -12,7 +12,7 @@
   
   <title>
     
-      煜
+      关于Linux 虚拟机如何才能ping 通外网 | 煜
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -113,93 +113,92 @@
   </div>
 </header>
 
-    <div id="article-banner">
-  <h2>Archives</h2>
-  <p class="post-date">文章归档</p>
-</div>
-<main class="app-body" id="archives">
-  
-  
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2017
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/2017/Day07-组件生命周期详解/" class="archive-title">组件生命周期详解</a>
-        <p class="archive-date">09-17</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/10/Day06-理解Virtual-DOM模型/" class="archive-title">理解Virtual-DOM模型</a>
-        <p class="archive-date">09-10</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/02/Day05-组件间的通信/" class="archive-title">React组件间的通信</a>
-        <p class="archive-date">09-02</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/07/01/Day04-React中的样式处理/" class="archive-title">React中的样式处理</a>
-        <p class="archive-date">07-01</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/30/Day03-React使用表单的正确姿势/" class="archive-title">React使用表单的正确姿势</a>
-        <p class="archive-date">06-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/28/Day02-React事件系统/" class="archive-title">React事件系统</a>
-        <p class="archive-date">06-28</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/26/Day01-初识React/" class="archive-title">初识React</a>
-        <p class="archive-date">06-26</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/17/React常见问题的整理/" class="archive-title">React常见问题的整理</a>
-        <p class="archive-date">06-17</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/14/深入理解flex-grow、flex-basis、flex-shrink/" class="archive-title">深入理解flex-grow、flex-basis、flex-shrink</a>
-        <p class="archive-date">06-14</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/12/纯手工打造前端后端分离项目中的mock-server/" class="archive-title">纯手工打造前端后端分离项目中的mock-server</a>
-        <p class="archive-date">06-12</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/09/深入理解JavaScript原型和原型链/" class="archive-title">深入理解JavaScript原型和原型链</a>
-        <p class="archive-date">06-09</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/07/纪念那些年我写的PHP/" class="archive-title">纪念那些年我写的PHP</a>
-        <p class="archive-date">06-07</p>
-      </div>
-    
+    <div id="article-banner" style="background-image: url('http://file.muyutech.com/about.jpg');">
+  <h2>关于Linux 虚拟机如何才能ping 通外网</h2>
+  <p class="post-date">2017-10-09</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
   </div>
-</section>
-  
-</main>
+</div>
+<main class="app-body">
+  <article class="post-article">
+    <section class="markdown-content"><blockquote>
+<p>需要虚拟机能够联网。以前都是用桥接模式让虚拟机跟主机通信，这几天查了好多资料，都没有写得很详细，自己捣鼓了很久，把步骤写下来吧.</p>
+</blockquote>
+<h4>虚拟机操作步骤:</h4>
 
-<script>
-  (function () {
-    var url = 'https://yanm1ng.github.io/tags/php/index.html';
-    $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
-  })();
-</script>
+<h4>点击虚拟机的“菜单栏”上的“编辑”，再点击“虚拟网络编辑器”，接着的操作如下图所示：</p>
+<p><img src="http://blog.liueryan.com/blogimg/09/1.png" alt="" /></p>
+<h4>然后选择添加vm8 ,点确定之后会出现以下界面，如下图所示</h4>
+<p><img src="http://blog.liueryan.com/blogimg/09/2.png" alt="" /></p>
+<h4>接着点“NAT设置”</h4>
+<p><img src="http://blog.liueryan.com/blogimg/09/3.png" alt="" /></p>
+<h4>然后接着以下步骤</h4>
+<p><img src="http://blog.liueryan.com/blogimg/09/4.png" alt="" /></p>
+<h4>设置完成之后点“确定”，再依次点击"应用"和"确定"来保存设置。</h4>
+<h4>接着回到虚拟机的操作界面，输入命令：setup,如下图</h4>
+<p><img src="http://blog.liueryan.com/blogimg/09/5.png" alt="" /></p>
+<h4>接着的操作路下图所示</h4>
+<p><img src="http://blog.liueryan.com/blogimg/09/6.png" alt="" /></p>
+<p><img src="http://blog.liueryan.com/blogimg/09/7.png" alt="" /></p>
+<p><img src="http://blog.liueryan.com/blogimg/09/8.png" alt="" /></p>
+<h4>设置好之后依次点击“OK”-->"save"-->"save &quit",接着按照下面图片步骤操作</h4>
+<p><img src="http://blog.liueryan.com/blogimg/09/9.png" alt="" /></p>
+<h4>会出现以下的界面</h4>
+<p><img src="http://blog.liueryan.com/blogimg/09/10.png" alt="" /></p>
+<h4>按空格键可以启动或者禁用防火墙，*代表启用，没有*代表禁用，设置用键盘的上下左右导航键选择“OK”-->"YES"进行保存,然后按“quit”退出</h4>
+<h4>现在我们要对真实机的vm8 的ip进行设置，按图片所示的步骤来吧。如下图。</h4>
+<p><img src="http://blog.liueryan.com/blogimg/09/11.png" alt="" /></p>
+<p><img src="http://blog.liueryan.com/blogimg/09/12.png" alt="" /></p>
+<h4>接着点击“确定”进行保存，我们还必须关闭真实机的操作系统，如下图操作所示：</h4>
+<p><img src="http://blog.liueryan.com/blogimg/09/13.png" alt="" /></p>
+<h4>关闭真实机的防火墙设置，然后我们回虚拟机测试一下能不能ping通真实机和外网。</h4>
+<h4>注意：一定要先重启下虚拟机的网络服务，输入以下命令：</h4>
+<figure class="highlight php">
+<table><tr><td class="code"><pre>
+<div class="line">service network restart</div>
+</pre></td></tr></table>
+</figure>
+<p><img src="http://blog.liueryan.com/blogimg/09/14.png" alt="" /></p>
+<h4>再查看下ip，发现我们前面在虚拟机设置的ip已经生效了</h4>
+<p><img src="http://blog.liueryan.com/blogimg/09/15.png" alt="" /></p>
+<p><img src="http://blog.liueryan.com/blogimg/09/16.png" alt="" /></p>
+<p><img src="http://blog.liueryan.com/blogimg/09/17.png" alt="" /></p>
+<h4>到这里，大功告成，虚拟机可以连接外网了。</h4>
+
+</section>
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#Linux" >
+    <span class="tag-code">Linux</span>
+  </a>
+
+      </div>
+    
+    <div class="money-like">
+      <div class="reward-btn">
+        赏
+        <span class="money-code">
+          <span class="alipay-code">
+            <div class="code-image"></div>
+            <b>使用支付宝打赏</b>
+          </span>
+          <span class="wechat-code">
+            <div class="code-image"></div>
+            <b>使用微信打赏</b>
+          </span>
+        </span>
+      </div>
+      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+    </div>
+    
+    
+      
+    
+  </article>
+</main>
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>

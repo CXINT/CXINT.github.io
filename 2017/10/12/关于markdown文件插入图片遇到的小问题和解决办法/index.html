@@ -12,7 +12,7 @@
   
   <title>
     
-      煜
+      关于markdown文件插入图片遇到的小问题和解决办法 | 煜
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -113,93 +113,86 @@
   </div>
 </header>
 
-    <div id="article-banner">
-  <h2>Archives</h2>
-  <p class="post-date">文章归档</p>
-</div>
-<main class="app-body" id="archives">
-  
-  
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2017
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/2017/Day07-组件生命周期详解/" class="archive-title">组件生命周期详解</a>
-        <p class="archive-date">09-17</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/10/Day06-理解Virtual-DOM模型/" class="archive-title">理解Virtual-DOM模型</a>
-        <p class="archive-date">09-10</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/02/Day05-组件间的通信/" class="archive-title">React组件间的通信</a>
-        <p class="archive-date">09-02</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/07/01/Day04-React中的样式处理/" class="archive-title">React中的样式处理</a>
-        <p class="archive-date">07-01</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/30/Day03-React使用表单的正确姿势/" class="archive-title">React使用表单的正确姿势</a>
-        <p class="archive-date">06-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/28/Day02-React事件系统/" class="archive-title">React事件系统</a>
-        <p class="archive-date">06-28</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/26/Day01-初识React/" class="archive-title">初识React</a>
-        <p class="archive-date">06-26</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/17/React常见问题的整理/" class="archive-title">React常见问题的整理</a>
-        <p class="archive-date">06-17</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/14/深入理解flex-grow、flex-basis、flex-shrink/" class="archive-title">深入理解flex-grow、flex-basis、flex-shrink</a>
-        <p class="archive-date">06-14</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/12/纯手工打造前端后端分离项目中的mock-server/" class="archive-title">纯手工打造前端后端分离项目中的mock-server</a>
-        <p class="archive-date">06-12</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/09/深入理解JavaScript原型和原型链/" class="archive-title">深入理解JavaScript原型和原型链</a>
-        <p class="archive-date">06-09</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/07/纪念那些年我写的PHP/" class="archive-title">纪念那些年我写的PHP</a>
-        <p class="archive-date">06-07</p>
-      </div>
-    
+    <div id="article-banner" style="background-image: url('http://file.muyutech.com/about.jpg');">
+  <h2>关于markdown文件插入图片遇到的小问题和解决办法</h2>
+  <p class="post-date">2017-10-12</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
   </div>
+</div>
+<main class="app-body">
+  <article class="post-article">
+    <section class="markdown-content"><blockquote>
+<p>今天用md文件时候发现需要插入图片，以前没做过，所以写下来分享下。</p>
+</blockquote>
+<h4>1.先在自己的github上建一个仓库，里面新建个img文件夹存放图片，怎么建仓库可以上网找资料，这里就不详细说明了。建好的仓库如下图所示，copy下仓库的路径。</h4>
+<p><img src="http://blog.liueryan.com/blogimg/12/1.png" alt="" /></p>
+<h4>2.在电脑新建一个文件夹，在文件夹中把github上的仓库先克隆下来，命令是git clone 仓库地址（要使用git命令得先在电脑上装好git-bash），如下图</h4>
+<p><img src="http://blog.liueryan.com/blogimg/12/2.png" alt="" /></p>
+<h4>3.克隆完之后会有一个以IMG命名仓库的文件夹，这个就是我们在github的IMG仓库。我们把一张test.jpg放到IMG文件的子文件夹img中</h4>
+<p><img src="http://blog.liueryan.com/blogimg/12/3.png" alt="" /></p>
+<h4>4.接着我们进入IMG文件中敲git命令</h4>
+
+<h4>先进入IMG的文件夹中 : <code>cd IMG/</code></h4>
+
+<h4>添加IMG文件夹下的所有文件：<code>git add .</code></h4>
+
+<h4>提交文件到分支：<code>git commit -m "备注你提交了哪些内容"</code></h4>
+
+<h4>把内容推送上仓库：<code>git push origin master</code></h4>
+
+<h4>所有步骤如下图所示：</h4>
+<p><img src="http://blog.liueryan.com/blogimg/12/4.png" alt="" /></p>
+<h4>5.上传成功之后我们可以去自己的github仓库看看</h4>
+<p><img src="http://blog.liueryan.com/blogimg/12/5.png" alt="" /></p>
+<p><img src="http://blog.liueryan.com/blogimg/12/7.png" alt="" /></p>
+<h4>6.接着我们新建的md文件，并且插入图片，md文件插入图片的代码是： <code>![]()</code></h4>
+
+<h4>注意：[] 里面可以写图片名或者其他备注信息，为的是让图像无法显示时可以看到备注内容。</h4>
+<p><img src="http://blog.liueryan.com/blogimg/12/6.png" alt="" /></p>
+<h4> 7.这时预览效果就出现了一个小问题了，路径写了完全正确图片却无法加载出来，把路径复制出来单独在新窗口打开却可以显示图片</h4>
+<p><img src="http://blog.liueryan.com/blogimg/12/8.png" alt="" /></p>
+<p><img src="http://blog.liueryan.com/blogimg/12/9.png" alt="" /></p>
+<h4>8.在网上找了资料，发现只要改路径的一个文件名就可以显示图片了。发现原来github和md文件关联的图片地址是有一定的格式的，其格式如下：</h4>
+
+<code>https://github.com/用户名/repository仓库名/raw/分支名master/图片文件夹名称/***.png or***.jpg</code>
+
+<h4>按照此格式github会自动解析这个语法，并把图片在md文件中正常显示出来。</h4>
+<p><img src="http://blog.liueryan.com/blogimg/12/10.png" alt="" /></p>
 </section>
-  
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#Markdown" >
+    <span class="tag-code">Markdown</span>
+  </a>
+
+      </div>
+    
+    <div class="money-like">
+      <div class="reward-btn">
+        赏
+        <span class="money-code">
+          <span class="alipay-code">
+            <div class="code-image"></div>
+            <b>使用支付宝打赏</b>
+          </span>
+          <span class="wechat-code">
+            <div class="code-image"></div>
+            <b>使用微信打赏</b>
+          </span>
+        </span>
+      </div>
+      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+    </div>
+    
+    
+      
+    
+  </article>
 </main>
 
-<script>
-  (function () {
-    var url = 'https://yanm1ng.github.io/tags/php/index.html';
-    $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
-  })();
-</script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>

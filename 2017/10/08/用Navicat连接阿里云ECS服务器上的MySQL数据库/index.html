@@ -12,7 +12,7 @@
   
   <title>
     
-      煜
+      用Navicat连接阿里云ECS服务器上的MySQL数据库 | 煜
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -113,93 +113,81 @@
   </div>
 </header>
 
-    <div id="article-banner">
-  <h2>Archives</h2>
-  <p class="post-date">文章归档</p>
-</div>
-<main class="app-body" id="archives">
-  
-  
-  
-    <section class="time-section">
-  <h1 class="section-year">
-    2017
-  </h1>
-  <div class="section-list">
-    
-    
-      <div class="section-list-item">
-        <a href="/2017/Day07-组件生命周期详解/" class="archive-title">组件生命周期详解</a>
-        <p class="archive-date">09-17</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/10/Day06-理解Virtual-DOM模型/" class="archive-title">理解Virtual-DOM模型</a>
-        <p class="archive-date">09-10</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/09/02/Day05-组件间的通信/" class="archive-title">React组件间的通信</a>
-        <p class="archive-date">09-02</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/07/01/Day04-React中的样式处理/" class="archive-title">React中的样式处理</a>
-        <p class="archive-date">07-01</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/30/Day03-React使用表单的正确姿势/" class="archive-title">React使用表单的正确姿势</a>
-        <p class="archive-date">06-30</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/28/Day02-React事件系统/" class="archive-title">React事件系统</a>
-        <p class="archive-date">06-28</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/26/Day01-初识React/" class="archive-title">初识React</a>
-        <p class="archive-date">06-26</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/17/React常见问题的整理/" class="archive-title">React常见问题的整理</a>
-        <p class="archive-date">06-17</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/14/深入理解flex-grow、flex-basis、flex-shrink/" class="archive-title">深入理解flex-grow、flex-basis、flex-shrink</a>
-        <p class="archive-date">06-14</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/12/纯手工打造前端后端分离项目中的mock-server/" class="archive-title">纯手工打造前端后端分离项目中的mock-server</a>
-        <p class="archive-date">06-12</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/09/深入理解JavaScript原型和原型链/" class="archive-title">深入理解JavaScript原型和原型链</a>
-        <p class="archive-date">06-09</p>
-      </div>
-    
-      <div class="section-list-item">
-        <a href="/2017/06/07/纪念那些年我写的PHP/" class="archive-title">纪念那些年我写的PHP</a>
-        <p class="archive-date">06-07</p>
-      </div>
-    
+    <div id="article-banner" style="background-image: url('http://file.muyutech.com/about.jpg');">
+  <h2>用Navicat连接阿里云ECS服务器上的MySQL数据库</h2>
+  <p class="post-date">2017-10-08</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
   </div>
+</div>
+<main class="app-body">
+  <article class="post-article">
+    <section class="markdown-content"><blockquote>
+<p>今天用navtive连接阿里云服务器（Linux）的数据库时，老是连接不上，并且报10060错误，要通过以下两个步骤解决</p>
+</blockquote>
+<h4>1.先进入linux连接数据库并输入密码:</h4>
+<figure class="highlight php">
+<table><tr><td class="code"><pre>
+<div class="line">mysql -uroot -p</div>
+</pre></td></tr></table>
+</figure>
+
+<h4>2.输入以下命令进行授权:</h4>
+<figure class="highlight php">
+<table><tr><td class="code"><pre>
+<div class="line">GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '这里写自己数据库的密码' WITH GRANT OPTION;</div>
+</pre></td></tr></table>
+</figure>
+
+<h4>3.刷新权限:</h4>
+<figure class="highlight php">
+<table><tr><td class="code"><pre>
+<div class="line">FLUSH PRIVILEGES;</div>
+</pre></td></tr></table>
+</figure>
+
+<p><img src="http://blog.liueryan.com/blogimg/08/1.png" alt="" /></p>
+
+<h4>4.但是添加了权限之后，还是连接不上数据库。必须给服务器的安全组设置端口放行规则</h4>
+<p><img src="http://blog.liueryan.com/blogimg/08/2.png" alt="" /></p>
+<p><img src="http://blog.liueryan.com/blogimg/08/3.png" alt="" /></p>
+
+
+<h4>5.接着就可以正常访问了.</h4>
 </section>
-  
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#MySQL" >
+    <span class="tag-code">MySQL</span>
+  </a>
+
+      </div>
+    
+    <div class="money-like">
+      <div class="reward-btn">
+        赏
+        <span class="money-code">
+          <span class="alipay-code">
+            <div class="code-image"></div>
+            <b>使用支付宝打赏</b>
+          </span>
+          <span class="wechat-code">
+            <div class="code-image"></div>
+            <b>使用微信打赏</b>
+          </span>
+        </span>
+      </div>
+      <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+    </div>
+    
+    
+      
+    
+  </article>
 </main>
 
-<script>
-  (function () {
-    var url = 'https://yanm1ng.github.io/tags/php/index.html';
-    $('#article-banner').geopattern(url);
-    $('.header').removeClass('fixed-header');
-  })();
-</script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
